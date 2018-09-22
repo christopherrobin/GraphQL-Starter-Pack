@@ -5,8 +5,6 @@ Preliminary roadmap includes better documentation, dotenv setup for secrets, sta
 
 Based on iamshaunjp's `graphql-playlist` @ https://github.com/iamshaunjp/graphql-playlist
 
-* * * 
-
 ## Features
 * React client side view for adding and viewing books
 * Plug and play server set up for use with Mongo via mLab
@@ -19,8 +17,6 @@ React, Express, GraphQL, MongoDB, Mongoose, Apollo, Lodash, and CORS
 * `http://localhost:3000/` Client Side Entry point
 * `http://localhost:4000/graphql` GraphQL Query Tool
 
-* * *
-
 # Quick Start
 1. Clone _GraphQL-Starter-Pack_ repository onto your local hard drive
 2. `npm install` all the things (_should create node_modules and package lock files_)
@@ -31,8 +27,6 @@ React, Express, GraphQL, MongoDB, Mongoose, Apollo, Lodash, and CORS
     - Continue to populate database with dummy data as you see fit
 5. `nodemon app` from root of server folder
 6. `npm start` from root of client folder
-
-* * *
 
 # Helpful Queries
 ## Add Author
