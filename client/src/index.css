@@ -1,72 +1,36 @@
 body{
-    background: #eee;
-    font-family: 'Nunito SemiBold';
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #444;
+}
+
+form button{
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    width: 100%;
 }
 
 #main h1{
-    color: #444;
     text-align: center;
 }
 
 #main{
-    padding: 0px;
     box-sizing: border-box;
     width: 60%;
     height: 100%;
 }
 
-#book-list{
-    padding: 0;
+ul#book-list {
+    padding-left: 0;
 }
 
 #book-list li{
     display: inline-block;
-    margin: 12px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #880E4F;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    border: 1px solid #444;
     cursor: pointer;
-    color: #880E4F;
-}
-
-form{
-    background: #fff;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 400px;
-}
-
-form .field{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
-form label{
-    text-align: right;
-    padding: 6px;
-}
-
-form input, form select{
-    margin: 4px 0;
-    padding: 6px;
-    box-sizing: border-box;
-}
-
-form button{
-    color: #fff;
-    font-size: 2em;
-    background: #AD1457;
-    border: 0;
-    padding: 0 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+    margin: .5em; padding: .5em;
 }
 
 #book-details{
@@ -75,10 +39,12 @@ form button{
     right: 0;
     width: 40%;
     height: 100%;
-    background: #AD1457;
     padding: 30px;
     overflow: auto;
-    box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
     box-sizing: border-box;
-    color: #fff;
+    border-left: 1px dotted #444;
+}
+
+#add-book{
+    margin: 1em;
 }
