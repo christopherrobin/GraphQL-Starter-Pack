@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 // connect to mlab database
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     console.log('Connected to database');
 });
@@ -23,5 +23,5 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 app.listen(4000, () => {
-    console.log('now listening for requests on port 4000');
+    console.log('Now listening for requests on port 4000');
 });

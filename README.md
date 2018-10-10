@@ -1,7 +1,14 @@
 # GraphQL Starter Pack
 This is a GraphQL Starter Pack for anyone looking to get a React/GraphQL/MongoDB proof of concept running quickly. In this example we will use books and authors.
 
-Preliminary roadmap includes full documentation, static type checking, OAuth, Redux, hot module reloading, and Heroku/AWS integration.
+Roadmap includes:
+- Thorough documentation
+- Static type checking
+- OAuth
+- Redux
+- Hot Module Reloading
+- Easy Heroku and AWS integration/documentation
+- React bootstrap 4
 
 Based on iamshaunjp's `graphql-playlist` @ https://github.com/iamshaunjp/graphql-playlist
 
