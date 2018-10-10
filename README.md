@@ -6,7 +6,6 @@ Roadmap includes:
 - Static type checking
 - OAuth
 - Redux
-- Hot Module Reloading
 - Easy Heroku and AWS integration/documentation
 - React bootstrap 4
 
