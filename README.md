@@ -7,7 +7,6 @@ Roadmap includes:
 - OAuth
 - Redux
 - Easy Heroku and AWS integration/documentation
-- React bootstrap 4
 
 Based on iamshaunjp's `graphql-playlist` @ https://github.com/iamshaunjp/graphql-playlist
 
@@ -19,7 +18,7 @@ Based on iamshaunjp's `graphql-playlist` @ https://github.com/iamshaunjp/graphql
 * `http://localhost:3000/` Client Side Entry point
 
 ### Toolbox
-React, Express, GraphQL, MongoDB, Mongoose, Apollo, Lodash, and CORS
+React, Express, GraphQL, MongoDB, Mongoose, Apollo, Lodash, Bootstrap, and CORS
 
 # Quick Start
 1. Clone _GraphQL-Starter-Pack_ repository onto your local hard drive
