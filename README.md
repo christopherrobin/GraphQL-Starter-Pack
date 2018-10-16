@@ -2,7 +2,6 @@
 This is a GraphQL Starter Pack for anyone looking to get a React/GraphQL/MongoDB proof of concept running quickly. In this example we will use books and authors.
 
 Roadmap includes:
-- Thorough documentation
 - Static type checking
 - OAuth
 - Redux
