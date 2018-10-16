@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import { Grid } from 'react-bootstrap';
 
 // components
 import BookList from './components/BookList';
@@ -15,11 +16,13 @@ class App extends Component {
   render() {
     return (
         <ApolloProvider client={client}>
-            <div id="main">
-                <h1>Entries</h1>
+            <Grid>
+                <h1>GraphQL Starter Pack</h1>
+                <h2>Select Book</h2>
                 <BookList />
+                <h2>Add Book</h2>
                 <AddBook />
-            </div>
+            </Grid>
         </ApolloProvider>
     );
   }

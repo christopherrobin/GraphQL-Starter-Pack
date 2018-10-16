@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries';
+import { Button, FormGroup, ControlLabel, FormControl, select } from 'react-bootstrap';
 
 class AddBook extends Component {
     constructor(props){
@@ -11,6 +12,7 @@ class AddBook extends Component {
             authorId: ''
         };
     }
+
     displayAuthors(){
         var data = this.props.getAuthorsQuery;
         if(data.loading){
@@ -21,6 +23,7 @@ class AddBook extends Component {
             });
         }
     }
+
     submitForm(e){
         e.preventDefault()
         // use the addBookMutation
@@ -33,25 +36,45 @@ class AddBook extends Component {
             refetchQueries: [{ query: getBooksQuery }]
         });
     }
+
+    FieldGroup({ id, label, help, ...props }) {
+        return (
+            <FormGroup controlId={id}>
+                <ControlLabel>{label}</ControlLabel>
+                <FormControl {...props} />
+            </FormGroup>
+        );
+    }
+
     render(){
         return(
-            <form id="add-book" onSubmit={ this.submitForm.bind(this) }>
-                <div className="field">
-                    <label>Book name:</label>
-                    <input type="text" onChange={ (e) => this.setState({ name: e.target.value }) } />
-                </div>
-                <div className="field">
-                    <label>Genre:</label>
-                    <input type="text" onChange={ (e) => this.setState({ genre: e.target.value }) } />
-                </div>
-                <div className="field">
-                    <label>Author:</label>
-                    <select onChange={ (e) => this.setState({ authorId: e.target.value }) } >
-                        <option>Select author</option>
-                        { this.displayAuthors() }
-                    </select>
-                </div>
-                <button>Add</button>
+            <form id="add-book">
+                <this.FieldGroup
+                    id="add-book-name"
+                    type="text"
+                    label="Book Name"
+                    placeholder="Book Name"
+                    onChange={(e) => this.setState({ name: e.target.value })}
+                />
+                <this.FieldGroup
+                    id="add-book-genre"
+                    type="text"
+                    label="Genre"
+                    placeholder="Genre"
+                    onChange={(e) => this.setState({ genre: e.target.value })}
+                />
+                <select
+                    className="form-control form-control-sm"
+                    onChange={(e) => this.setState({ authorId: e.target.value })}
+                >
+                    <option>Select author</option>
+                    {this.displayAuthors()}
+                </select>
+                <Button
+                    bsStyle="primary" style={{ marginTop: '1em' }}
+                    onClick={this.submitForm.bind(this)}>
+                Add
+                </Button>
             </form>
         );
     }

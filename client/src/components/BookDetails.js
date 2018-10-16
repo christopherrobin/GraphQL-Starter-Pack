@@ -20,7 +20,11 @@ class BookDetails extends Component {
                 </div>
             );
         } else {
-            return( <div>No book selected...</div> );
+            return( <div
+                    id='book-details-wrapper'>
+                        No book selected...
+                    </div>
+                );
         }
     }
     render(){

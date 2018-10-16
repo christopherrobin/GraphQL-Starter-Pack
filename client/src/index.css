@@ -6,21 +6,7 @@ body{
 }
 
 form button{
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 1em;
     width: 100%;
-}
-
-#main h1{
-    text-align: center;
-}
-
-#main{
-    /*
-    box-sizing: border-box;
-    width: 60%;
-    height: 100%;*/
 }
 
 ul#book-list {
@@ -28,26 +14,25 @@ ul#book-list {
 }
 
 #book-list li{
-    display: inline-block;
     border: 1px solid #444;
     cursor: pointer;
-    margin: .5em; padding: .5em;
+    list-style-type: none;
+    margin-bottom: .5em;
+    padding: .5em;
 }
 
 #book-details{
-    /*
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    padding: 30px;
-    overflow: auto;
-    box-sizing: border-box;
-    border-left: 1px dotted #444;
-*/
+    margin: 2em 0;
+    padding: 1em;
+    background: #f6f6f6;
+    color: #000;
+    border: 1px solid #e6e6e6;
 }
 
-#add-book{
-    margin: 1em;
+button.book-listing-button.btn.btn-default {
+    margin: 0  .5em .5em 0;
+}
+
+#book-details h2{
+margin-top: 0;
 }
