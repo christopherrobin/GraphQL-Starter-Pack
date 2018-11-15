@@ -1,31 +1,15 @@
-import React, { Component } from 'react';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
-import { Grid } from 'react-bootstrap';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import BookView from './BookView';
+import NotFoundComponent from './components/NotFound';
+import WelcomeComponent from './components/Welcome';
 
-// components
-import BookList from './components/BookList';
-import AddBook from './components/AddBook';
-
-// apollo client setup
-const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql'
-});
-
-class App extends Component {
-  render() {
+export default function createRoutes() {
     return (
-        <ApolloProvider client={client}>
-            <Grid>
-                <h1>GraphQL Starter Pack</h1>
-                <h2>Select Book</h2>
-                <BookList />
-                <h2>Add Book</h2>
-                <AddBook />
-            </Grid>
-        </ApolloProvider>
+        <Switch>
+            <Route exact path='/' component={WelcomeComponent} />
+            <Route path='/books' component={BookView} />
+            <Route path='/*' component={NotFoundComponent} />
+        </Switch>
     );
-  }
 }
-
-export default App;
