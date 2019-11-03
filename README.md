@@ -20,8 +20,8 @@ Based on iamshaunjp's `graphql-playlist` @ https://github.com/iamshaunjp/graphql
 React, Express, GraphQL, MongoDB, Mongoose, Apollo, Lodash, Bootstrap, React-Router, dotenv, and CORS
 
 # Quick Start
-1. Clone _GraphQL-Starter-Pack_ repository onto your local hard drive
-2. `npm install` all the things (_should create node_modules and package lock files_)
+1. `git clone https://github.com/christopherrobin/GraphQL-Starter-Pack.git`
+2. `cd GraphQL-Starter-Pack && cd client && npm install`
 3. Prepare your database
     - Create a sandbox Mongo DB instance in mLab
     - Insert database url/credentials into a `.env` in the root of the `server` folder
