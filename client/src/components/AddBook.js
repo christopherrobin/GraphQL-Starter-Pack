@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries';
 import { Button, FormGroup, ControlLabel, FormControl, select } from 'react-bootstrap';
+import _ from 'lodash';
 
 class AddBook extends Component {
     constructor(props){
@@ -80,7 +81,7 @@ class AddBook extends Component {
     }
 }
 
-export default compose(
+export default _.flowRight(
     graphql(getAuthorsQuery, { name: "getAuthorsQuery" }),
     graphql(addBookMutation, { name: "addBookMutation" })
 )(AddBook);
