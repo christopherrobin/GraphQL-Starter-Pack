@@ -18,7 +18,7 @@ class AddBook extends Component {
         var data = this.props.getAuthorsQuery;
         if(data.loading){
             return( <option disabled>Loading authors</option> );
-        } else {
+        } else if (!data.error.message) {
             return data.authors.map(author => {
                 return( <option key={ author.id } value={author.id}>{ author.name }</option> );
             });

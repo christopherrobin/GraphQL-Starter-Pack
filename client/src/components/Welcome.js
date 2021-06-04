@@ -6,7 +6,7 @@ class Welcome extends Component {
     return (
       <Grid>
         <Row>
-          <Col>
+          <Col xs={12}>
             <h1>GraphQL Starter Pack</h1>
             <p>This is a GraphQL Starter Pack for anyone looking to get a React/GraphQL/MongoDB
             proof of concept running quickly. In this example we will use books and authors.</p>

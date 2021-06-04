@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getBooksQuery } from '../queries/queries';
-import { Button } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import BookDetails from './BookDetails';
 
 class BookList extends Component {
@@ -13,10 +13,14 @@ class BookList extends Component {
     }
 
     displayBooks(){
-        var data = this.props.data;
-        if(data.loading){
+        const data = this.props.data;
+        const { loading, error } = data;
+        if(loading){
             return( <div>Loading books...</div> );
-        } else {
+        } else if (error && !loading) {
+            console.error(error.message);
+            return (<Alert variant="danger" className="alert-danger"><h4>Error</h4>{error.message}</Alert>)
+        } else if (!error.message) {
             return data.books.map(book => {
                 return(
                     <Button
